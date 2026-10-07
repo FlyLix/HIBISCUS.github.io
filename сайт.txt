@@ -1,0 +1,2770 @@
+```html
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Гібіскус — прекрасна квітка. Історія, види, посадка, розмноження, укорінення, догляд, хвороби та цікаві факти.">
+
+    <meta name="keywords"
+          content="гібіскус, квіти, вирощування гібіскуса, догляд за гібіскусом, розмноження, укорінення, кімнатний гібіскус">
+
+    <meta name="author" content="Hibiscus">
+
+    <title>HIBISCUS — світ прекрасних квітів</title>
+
+    <style>
+        /* =========================================================
+           ОСНОВНІ НАЛАШТУВАННЯ
+        ========================================================= */
+
+        :root {
+            --pink: #e88b9d;
+            --pink-light: #fdecef;
+            --green: #719b78;
+            --green-dark: #315b3c;
+            --green-light: #eaf4eb;
+            --red: #a83e4d;
+            --white: #ffffff;
+            --cream: #fffaf7;
+            --text: #29332c;
+            --text-light: #637067;
+            --border: #e4e9e5;
+            --shadow: 0 10px 30px rgba(49, 91, 60, 0.10);
+            --shadow-hover: 0 18px 40px rgba(49, 91, 60, 0.16);
+            --radius: 18px;
+            --transition: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            display: block;
+            color: var(--pink);
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .section-title h2 {
+            color: var(--green-dark);
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--text-light);
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 250, 247, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(228, 233, 229, 0.8);
+        }
+
+        .navbar {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            color: var(--green-dark);
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--pink);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 9px 11px;
+            color: var(--text);
+            font-size: 0.88rem;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--red);
+            background: var(--pink-light);
+        }
+
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: var(--green-dark);
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.3rem;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 72px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,250,247,0.98) 0%,
+                    rgba(255,250,247,0.88) 42%,
+                    rgba(255,250,247,0.35) 100%
+                ),
+                url("https://images.unsplash.com/photo-1585364922872-a31f0cdb2b9f?auto=format&fit=crop&w=1800&q=85")
+                center / cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            padding: 60px 0;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 7px 15px;
+            margin-bottom: 20px;
+            background: var(--pink-light);
+            color: var(--red);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            color: var(--green-dark);
+            font-size: clamp(2.7rem, 7vw, 5.5rem);
+            line-height: 1.03;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--pink);
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: var(--text-light);
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: var(--green-dark);
+            color: white;
+            font-weight: bold;
+            border: 2px solid var(--green-dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+            background: var(--red);
+            border-color: var(--red);
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about {
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .about-text h3 {
+            color: var(--green-dark);
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: var(--text-light);
+        }
+
+        .fact-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .fact {
+            padding: 17px;
+            background: var(--green-light);
+            border-radius: 13px;
+        }
+
+        .fact strong {
+            display: block;
+            color: var(--green-dark);
+            margin-bottom: 4px;
+        }
+
+        .fact span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           HISTORY
+        ========================================================= */
+
+        .history {
+            background: var(--pink-light);
+        }
+
+        .history-content {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .history-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .timeline {
+            margin-top: 40px;
+            display: grid;
+            gap: 18px;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 25px;
+            border-left: 5px solid var(--pink);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-item h3 {
+            color: var(--green-dark);
+            margin-bottom: 7px;
+        }
+
+        /* =========================================================
+           SPECIES
+        ========================================================= */
+
+        .species-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .species-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .species-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .species-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .species-content {
+            padding: 23px;
+        }
+
+        .species-content h3 {
+            color: var(--green-dark);
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .latin {
+            color: var(--pink);
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .species-content p {
+            color: var(--text-light);
+            font-size: 0.94rem;
+        }
+
+        /* =========================================================
+           GROWING
+        ========================================================= */
+
+        .growing {
+            background: var(--green-light);
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .care-card {
+            background: white;
+            padding: 27px 22px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .care-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .care-icon {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            border-radius: 50%;
+            background: var(--pink-light);
+            font-size: 1.5rem;
+        }
+
+        .care-card h3 {
+            color: var(--green-dark);
+            margin-bottom: 8px;
+        }
+
+        .care-card p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+        }
+
+        /* =========================================================
+           PLANTING
+        ========================================================= */
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            position: relative;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            border-radius: 50%;
+            background: var(--green-dark);
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .step h3 {
+            color: var(--green-dark);
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: var(--text-light);
+        }
+
+        /* =========================================================
+           PROPAGATION
+        ========================================================= */
+
+        .propagation {
+            background: var(--white);
+        }
+
+        .propagation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .propagation-box {
+            padding: 30px;
+            background: var(--cream);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .propagation-box h3 {
+            color: var(--green-dark);
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
+        .propagation-box p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            position: relative;
+            padding: 9px 0 9px 30px;
+            color: var(--text-light);
+        }
+
+        .check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        /* =========================================================
+           CARE TABLE
+        ========================================================= */
+
+        .care-table-section {
+            background: var(--green-light);
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+        }
+
+        th,
+        td {
+            padding: 17px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--green-dark);
+            color: white;
+        }
+
+        td {
+            color: var(--text-light);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* =========================================================
+           FLOWERING
+        ========================================================= */
+
+        .flowering-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .flowering-card {
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .flowering-card h3 {
+            color: var(--green-dark);
+            margin-bottom: 12px;
+        }
+
+        .flowering-card p {
+            color: var(--text-light);
+        }
+
+        /* =========================================================
+           PRUNING
+        ========================================================= */
+
+        .pruning {
+            background: var(--pink-light);
+        }
+
+        .pruning-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .pruning-content p {
+            color: var(--text-light);
+            margin-bottom: 18px;
+        }
+
+        .pruning-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .pruning-list div {
+            padding: 18px;
+            background: white;
+            border-radius: 13px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+        }
+
+        /* =========================================================
+           DISEASES
+        ========================================================= */
+
+        .diseases {
+            background: white;
+        }
+
+        .disease-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .disease-card {
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .disease-card h3 {
+            color: var(--red);
+            margin-bottom: 10px;
+        }
+
+        .disease-card p {
+            color: var(--text-light);
+            font-size: 0.94rem;
+        }
+
+        .disease-card strong {
+            color: var(--green-dark);
+        }
+
+        /* =========================================================
+           WINTER
+        ========================================================= */
+
+        .winter {
+            background: var(--green-light);
+        }
+
+        .winter-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .winter-image img {
+            width: 100%;
+            height: 440px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .winter-text h3 {
+            color: var(--green-dark);
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .winter-text p {
+            color: var(--text-light);
+            margin-bottom: 18px;
+        }
+
+        /* =========================================================
+           CULTURE
+        ========================================================= */
+
+        .culture {
+            background: var(--white);
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .culture-card {
+            padding: 28px;
+            border-radius: var(--radius);
+            background: var(--cream);
+            border: 1px solid var(--border);
+        }
+
+        .culture-card h3 {
+            color: var(--green-dark);
+            margin-bottom: 10px;
+        }
+
+        .culture-card p {
+            color: var(--text-light);
+        }
+
+        /* =========================================================
+           FACTS
+        ========================================================= */
+
+        .facts-section {
+            background:
+                linear-gradient(rgba(49,91,60,0.92), rgba(49,91,60,0.92)),
+                url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1800&q=80")
+                center / cover;
+            color: white;
+        }
+
+        .facts-section .section-title h2,
+        .facts-section .section-title p {
+            color: white;
+        }
+
+        .facts-section .section-title span {
+            color: #ffd1da;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .fact-item {
+            min-height: 150px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .fact-item strong {
+            display: block;
+            color: #ffd1da;
+            font-size: 1.6rem;
+            margin-bottom: 7px;
+        }
+
+        .fact-item span {
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           FAQ
+        ========================================================= */
+
+        .faq {
+            background: var(--pink-light);
+        }
+
+        .faq-container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .faq-item {
+            margin-bottom: 12px;
+            background: white;
+            border-radius: 13px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            background: white;
+            border: none;
+            color: var(--green-dark);
+            font-weight: bold;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .faq-question span {
+            font-size: 1.4rem;
+            color: var(--pink);
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+
+        /* =========================================================
+           CONCLUSION
+        ========================================================= */
+
+        .conclusion {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--cream);
+        }
+
+        .conclusion-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .conclusion h2 {
+            color: var(--green-dark);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 20px;
+        }
+
+        .conclusion p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            padding: 35px 0;
+            background: #203f29;
+            color: white;
+            text-align: center;
+        }
+
+        footer h3 {
+            color: #ffd1da;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           КНОПКА НАВЕРХ
+        ========================================================= */
+
+        #topButton {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 900;
+            width: 48px;
+            height: 48px;
+            border: none;
+            border-radius: 50%;
+            background: var(--pink);
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        #topButton.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #topButton:hover {
+            background: var(--red);
+            transform: translateY(-3px);
+        }
+
+        /* =========================================================
+           АНІМАЦІЯ ПОЯВИ
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================================
+           АДАПТИВНІСТЬ — ПЛАНШЕТ
+        ========================================================= */
+
+        @media (max-width: 1050px) {
+
+            .nav-menu {
+                gap: 0;
+            }
+
+            .nav-menu a {
+                padding: 8px 7px;
+                font-size: 0.8rem;
+            }
+
+            .care-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .facts-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* =========================================================
+           АДАПТИВНІСТЬ — ТЕЛЕФОН
+        ========================================================= */
+
+        @media (max-width: 800px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+            .navbar {
+                min-height: 65px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 65px;
+                left: 0;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                flex-direction: column;
+                align-items: stretch;
+                background: rgba(255,250,247,0.98);
+                box-shadow: var(--shadow);
+                transition: max-height 0.35s ease;
+            }
+
+            .nav-menu.active {
+                max-height: 500px;
+            }
+
+            .nav-menu a {
+                padding: 13px 25px;
+                border-radius: 0;
+                border-bottom: 1px solid var(--border);
+                font-size: 0.95rem;
+            }
+
+            .hero {
+                min-height: 90vh;
+                background:
+                    linear-gradient(
+                        rgba(255,250,247,0.88),
+                        rgba(255,250,247,0.92)
+                    ),
+                    url("https://images.unsplash.com/photo-1585364922872-a31f0cdb2b9f?auto=format&fit=crop&w=1200&q=80")
+                    center / cover;
+            }
+
+            .hero-content {
+                padding: 40px 0;
+            }
+
+            .about-grid,
+            .propagation-grid,
+            .winter-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .about-image img {
+                height: 350px;
+            }
+
+            .species-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .flowering-grid,
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .disease-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .facts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .winter-image img {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .container {
+                width: 90%;
+            }
+
+            .hero h1 {
+                font-size: 2.65rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .fact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .species-grid,
+            .care-grid,
+            .steps,
+            .pruning-list,
+            .facts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .species-card img {
+                height: 250px;
+            }
+
+            .about-image img,
+            .winter-image img {
+                height: 300px;
+            }
+
+            .section-title {
+                margin-bottom: 35px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .faq-question {
+                padding: 17px;
+            }
+
+            #topButton {
+                width: 44px;
+                height: 44px;
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header>
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+                HIBIS<span>CUS</span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Відкрити меню"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+
+                    <li><a href="#home">Головна</a></li>
+                    <li><a href="#about">О рослині</a></li>
+                    <li><a href="#species">Види</a></li>
+                    <li><a href="#growing">Вирощування</a></li>
+                    <li><a href="#propagation">Розмноження</a></li>
+                    <li><a href="#care">Догляд</a></li>
+                    <li><a href="#diseases">Хвороби</a></li>
+                    <li><a href="#facts">Факти</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =====================================================
+             ГОЛОВНА
+        ====================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="container">
+
+                <div class="hero-content reveal">
+
+                    <span class="hero-label">
+                        СВІТ ТРОПІЧНИХ КВІТІВ
+                    </span>
+
+                    <h1>
+                        Гібіскус —
+                        <span>квітка</span>
+                        тропічної краси
+                    </h1>
+
+                    <p>
+                        Гібіскус — дивовижна рослина з великими яскравими
+                        квітами, яка поєднує декоративність, різноманітність
+                        форм і цікаву історію.
+                    </p>
+
+                    <a href="#about" class="btn">
+                        Дізнатися більше
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ПРО РОСЛИНУ
+        ====================================================== -->
+
+        <section class="about" id="about">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>ЗНАЙОМСТВО</span>
+                    <h2>Що таке гібіскус?</h2>
+                    <p>
+                        Рослина, яка підкорює різноманітністю кольорів,
+                        форм і розмірів.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-image reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1597848212624-e19c3f8c5f7e?auto=format&fit=crop&w=1000&q=85"
+                            alt="Яскрава квітка гібіскуса">
+                    </div>
+
+                    <div class="about-text reveal">
+
+                        <h3>Гібіскус — рід рослин родини мальвових</h3>
+
+                        <p>
+                            Гібіскус — це великий рід квіткових рослин
+                            родини Мальвові. До нього належать трав'янисті
+                            рослини, кущі та невеликі дерева.
+                        </p>
+
+                        <p>
+                            Наукова назва роду — <em>Hibiscus</em>.
+                            Представники цього роду природно поширені
+                            переважно в теплих і тропічних регіонах світу,
+                            хоча окремі види добре пристосовані до
+                            помірного клімату.
+                        </p>
+
+                        <p>
+                            Найвідомішим кімнатним видом є китайська троянда
+                            (<em>Hibiscus rosa-sinensis</em>). Садівники
+                            також вирощують сирійський, трав'янистий та
+                            інші види гібіскуса.
+                        </p>
+
+                        <div class="fact-box">
+
+                            <div class="fact">
+                                <strong>Родина</strong>
+                                <span>Мальвові</span>
+                            </div>
+
+                            <div class="fact">
+                                <strong>Рід</strong>
+                                <span>Hibiscus</span>
+                            </div>
+
+                            <div class="fact">
+                                <strong>Форма</strong>
+                                <span>Кущі, трави, дерева</span>
+                            </div>
+
+                            <div class="fact">
+                                <strong>Поширення</strong>
+                                <span>Тропіки та субтропіки</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ІСТОРІЯ
+        ====================================================== -->
+
+        <section class="history" id="history">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>МИНУЛЕ РОСЛИНИ</span>
+                    <h2>Історія гібіскуса</h2>
+                    <p>
+                        Гібіскус має давню історію та важливе місце
+                        в культурах багатьох народів.
+                    </p>
+                </div>
+
+                <div class="history-content reveal">
+
+                    <p>
+                        Гібіскуси походять із теплих регіонів світу.
+                        Різні представники роду природно зустрічаються
+                        в Азії, Африці, на островах Тихого океану,
+                        в Австралії та Америці.
+                    </p>
+
+                    <p>
+                        Люди протягом століть вирощували гібіскуси
+                        як декоративні рослини. Завдяки великим
+                        і яскравим квітам вони поступово поширилися
+                        далеко за межі природного ареалу.
+                    </p>
+
+                    <p>
+                        Особливо популярним став Hibiscus rosa-sinensis,
+                        який сьогодні можна побачити в садах, оранжереях
+                        і будинках у різних країнах світу.
+                    </p>
+
+                    <p>
+                        Деякі види гібіскуса мають не лише декоративне,
+                        а й практичне значення. Наприклад, суданська троянда
+                        використовується для приготування напоїв.
+                    </p>
+
+                </div>
+
+                <div class="timeline">
+
+                    <article class="timeline-item reveal">
+                        <h3>🌱 Походження</h3>
+                        <p>
+                            Різноманітні види гібіскуса сформувалися
+                            в теплих регіонах планети та пристосувалися
+                            до різних природних умов.
+                        </p>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <h3>🌏 Поширення</h3>
+                        <p>
+                            Завдяки декоративним властивостям гібіскус
+                            почали вирощувати в садах та оранжереях
+                            різних країн.
+                        </p>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <h3>🌺 Популярність</h3>
+                        <p>
+                            Сьогодні гібіскус є однією з відомих
+                            декоративних рослин тропічного та
+                            субтропічного походження.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ВИДИ
+        ====================================================== -->
+
+        <section id="species">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>РІЗНОМАНІТТЯ</span>
+                    <h2>Види гібіскуса</h2>
+                    <p>
+                        Існує багато видів гібіскуса, які відрізняються
+                        розмірами, формою квітів та умовами вирощування.
+                    </p>
+                </div>
+
+                <div class="species-grid">
+
+                    <article class="species-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1585364922872-a31f0cdb2b9f?auto=format&fit=crop&w=800&q=80"
+                            alt="Hibiscus rosa-sinensis">
+                        <div class="species-content">
+                            <h3>Китайська троянда</h3>
+                            <div class="latin">Hibiscus rosa-sinensis</div>
+                            <p>
+                                Популярний кімнатний і декоративний
+                                гібіскус із великими яскравими квітами.
+                                Любить тепло, світло та регулярний догляд.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="species-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80"
+                            alt="Hibiscus syriacus">
+                        <div class="species-content">
+                            <h3>Гібіскус сирійський</h3>
+                            <div class="latin">Hibiscus syriacus</div>
+                            <p>
+                                Листопадний кущ, який добре підходить
+                                для саду. Витриваліший до прохолодного
+                                клімату, ніж тропічні види.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="species-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=80"
+                            alt="Hibiscus sabdariffa">
+                        <div class="species-content">
+                            <h3>Гібіскус сабдаріфа</h3>
+                            <div class="latin">Hibiscus sabdariffa</div>
+                            <p>
+                                Відомий як суданська троянда. Чашечки
+                                його квіток використовують для приготування
+                                популярних кислуватих напоїв.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="species-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=800&q=80"
+                            alt="Hibiscus moscheutos">
+                        <div class="species-content">
+                            <h3>Гібіскус болотний</h3>
+                            <div class="latin">Hibiscus moscheutos</div>
+                            <p>
+                                Багаторічна трав'яниста рослина з дуже
+                                великими квітами. Полюбляє вологі ґрунти
+                                та сонячне місце.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="species-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80"
+                            alt="Hibiscus mutabilis">
+                        <div class="species-content">
+                            <h3>Гібіскус мінливий</h3>
+                            <div class="latin">Hibiscus mutabilis</div>
+                            <p>
+                                Цікавий вид, квіти якого можуть змінювати
+                                відтінок протягом дня або в процесі
+                                цвітіння.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="species-card reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&fit=crop&w=800&q=80"
+                            alt="Hibiscus schizopetalus">
+                        <div class="species-content">
+                            <h3>Гібіскус розсіченопелюстковий</h3>
+                            <div class="latin">Hibiscus schizopetalus</div>
+                            <p>
+                                Вирізняється незвичайними пониклими
+                                квітами з сильно розсіченими пелюстками.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ВИРОЩУВАННЯ
+        ====================================================== -->
+
+        <section class="growing" id="growing">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>ОСНОВИ</span>
+                    <h2>Умови вирощування</h2>
+                    <p>
+                        Правильні умови допоможуть гібіскусу активно
+                        рости та регулярно цвісти.
+                    </p>
+                </div>
+
+                <div class="care-grid">
+
+                    <article class="care-card reveal">
+                        <div class="care-icon">☀️</div>
+                        <h3>Освітлення</h3>
+                        <p>
+                            Гібіскус полюбляє яскраве світло. Більшості
+                            кімнатних сортів потрібне добре освітлене
+                            місце, хоча в дуже спекотні години рослину
+                            бажано захищати від надмірного сонця.
+                        </p>
+                    </article>
+
+                    <article class="care-card reveal">
+                        <div class="care-icon">🌡️</div>
+                        <h3>Температура</h3>
+                        <p>
+                            Тропічні види краще ростуть у теплому
+                            приміщенні. Різкі перепади температури,
+                            холодні протяги та переохолодження можуть
+                            негативно впливати на рослину.
+                        </p>
+                    </article>
+
+                    <article class="care-card reveal">
+                        <div class="care-icon">💧</div>
+                        <h3>Вологість</h3>
+                        <p>
+                            У сухому приміщенні гібіскусу може бути
+                            корисне підвищення вологості повітря.
+                            Важливо не створювати постійного застою
+                            вологи біля коренів.
+                        </p>
+                    </article>
+
+                    <article class="care-card reveal">
+                        <div class="care-icon">🌱</div>
+                        <h3>Ґрунт</h3>
+                        <p>
+                            Ґрунт має бути поживним, легким і добре
+                            пропускати воду та повітря. Обов'язково
+                            потрібен хороший дренаж.
+                        </p>
+                    </article>
+
+                    <article class="care-card reveal">
+                        <div class="care-icon">💦</div>
+                        <h3>Полив</h3>
+                        <p>
+                            Поливайте після часткового підсихання
+                            верхнього шару ґрунту. Частота залежить
+                            від температури, розміру горщика та сезону.
+                        </p>
+                    </article>
+
+                    <article class="care-card reveal">
+                        <div class="care-icon">🌿</div>
+                        <h3>Добрива</h3>
+                        <p>
+                            У період активного росту можна використовувати
+                            добрива для квітучих рослин відповідно
+                            до інструкції на упаковці.
+                        </p>
+                    </article>
+
+                    <article class="care-card reveal">
+                        <div class="care-icon">🪴</div>
+                        <h3>Пересадка</h3>
+                        <p>
+                            Молоді рослини пересаджують частіше,
+                            дорослі — за потреби. Новий горщик має
+                            бути лише трохи більшим за попередній.
+                        </p>
+                    </article>
+
+                    <article class="care-card reveal">
+                        <div class="care-icon">📍</div>
+                        <h3>Місце</h3>
+                        <p>
+                            Найкраще місце — світле, тепле та захищене
+                            від холодних протягів. На вулиці важливо
+                            враховувати особливості конкретного виду.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ПОСАДКА
+        ====================================================== -->
+
+        <section id="planting">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>ПОСАДКА</span>
+                    <h2>Як посадити гібіскус</h2>
+                    <p>
+                        Посадка не є складною, якщо правильно підготувати
+                        ґрунт, місце та рослину.
+                    </p>
+                </div>
+
+                <div class="steps">
+
+                    <article class="step reveal">
+                        <div class="step-number">1</div>
+                        <h3>Вибір місця</h3>
+                        <p>
+                            Оберіть добре освітлене місце без сильних
+                            холодних протягів. Для садових видів
+                            враховуйте вимоги конкретного сорту.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">2</div>
+                        <h3>Підготовка ґрунту</h3>
+                        <p>
+                            Ґрунт має бути поживним, пухким і достатньо
+                            водопроникним. Застій води небезпечний
+                            для кореневої системи.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">3</div>
+                        <h3>Підготовка горщика</h3>
+                        <p>
+                            Для кімнатної рослини використовуйте горщик
+                            із дренажними отворами та шаром дренажу.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">4</div>
+                        <h3>Посадка</h3>
+                        <p>
+                            Обережно розмістіть рослину, не пошкоджуючи
+                            коріння. Засипте ґрунтом і злегка ущільніть
+                            його навколо рослини.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">5</div>
+                        <h3>Перший полив</h3>
+                        <p>
+                            Після посадки помірно полийте рослину,
+                            щоб ґрунт осів навколо коренів.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">6</div>
+                        <h3>Догляд</h3>
+                        <p>
+                            Після посадки забезпечте достатнє освітлення,
+                            стабільну температуру та помірний полив.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             РОЗМНОЖЕННЯ
+        ====================================================== -->
+
+        <section class="propagation" id="propagation">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>НОВІ РОСЛИНИ</span>
+                    <h2>Розмноження та укорінення</h2>
+                    <p>
+                        Гібіскус можна розмножувати кількома способами,
+                        але найпоширенішим для декоративних сортів
+                        є живцювання.
+                    </p>
+                </div>
+
+                <div class="propagation-grid">
+
+                    <div class="propagation-box reveal">
+
+                        <h3>🌿 Розмноження живцями</h3>
+
+                        <p>
+                            Живцювання дозволяє отримати нову рослину
+                            з частини здорового пагона. Для цього
+                            використовують відповідний здоровий живець
+                            та створюють сприятливі умови для утворення
+                            коренів.
+                        </p>
+
+                        <ul class="check-list">
+                            <li>Виберіть здоровий пагін.</li>
+                            <li>Зробіть чистий зріз.</li>
+                            <li>Видаліть нижні листки.</li>
+                            <li>Використовуйте легкий субстрат.</li>
+                            <li>Підтримуйте помірну вологість.</li>
+                            <li>Забезпечте тепло та розсіяне світло.</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="propagation-box reveal">
+
+                        <h3>💧 Укорінення у воді</h3>
+
+                        <p>
+                            Деякі живці можна укорінювати у воді.
+                            Зрізаний пагін поміщають у чисту воду так,
+                            щоб нижня частина була занурена, але листя
+                            не контактувало з водою.
+                        </p>
+
+                        <p>
+                            Воду потрібно регулярно оновлювати.
+                            Після появи достатньої кількості корінців
+                            живець можна обережно пересадити в ґрунт.
+                        </p>
+
+                        <h3>🌱 Укорінення в ґрунті</h3>
+
+                        <p>
+                            Для укорінення в субстраті використовують
+                            легку суміш, яка добре пропускає повітря
+                            та воду. Надмірне зволоження може призвести
+                            до загнивання живця.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div style="margin-top:30px;" class="steps">
+
+                    <article class="step reveal">
+                        <div class="step-number">1</div>
+                        <h3>Вибір пагона</h3>
+                        <p>
+                            Оберіть здоровий пагін без ознак хвороб
+                            або пошкоджень.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">2</div>
+                        <h3>Підготовка</h3>
+                        <p>
+                            Зробіть чистий зріз і видаліть зайві нижні
+                            листки, щоб вони не загнивали.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">3</div>
+                        <h3>Субстрат</h3>
+                        <p>
+                            Помістіть живець у легкий, чистий і
+                            водопроникний субстрат.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">4</div>
+                        <h3>Тепло</h3>
+                        <p>
+                            Підтримуйте стабільне тепло та уникайте
+                            холодних протягів.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">5</div>
+                        <h3>Корені</h3>
+                        <p>
+                            Стежте за станом живця та субстрату.
+                            Не допускайте постійного перезволоження.
+                        </p>
+                    </article>
+
+                    <article class="step reveal">
+                        <div class="step-number">6</div>
+                        <h3>Пересадка</h3>
+                        <p>
+                            Після достатнього укорінення молоду рослину
+                            обережно пересаджують у відповідний горщик.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ПОЛИВ ТА ДОГЛЯД
+        ====================================================== -->
+
+        <section class="care-table-section" id="care">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>ЩОДЕННИЙ ДОГЛЯД</span>
+                    <h2>Полив та догляд</h2>
+                    <p>
+                        Основні потреби гібіскуса змінюються залежно
+                        від сезону та умов вирощування.
+                    </p>
+                </div>
+
+                <div class="table-wrapper reveal">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Період</th>
+                                <th>Полив</th>
+                                <th>Освітлення</th>
+                                <th>Підживлення</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Весна</td>
+                                <td>Регулярний, після підсихання верхнього шару</td>
+                                <td>Яскраве</td>
+                                <td>Можна поступово відновлювати</td>
+                            </tr>
+
+                            <tr>
+                                <td>Літо</td>
+                                <td>Частіший за високої температури</td>
+                                <td>Достатнє, з захистом від надмірної спеки</td>
+                                <td>Регулярне за потреби</td>
+                            </tr>
+
+                            <tr>
+                                <td>Осінь</td>
+                                <td>Поступово зменшують</td>
+                                <td>Максимально доступне</td>
+                                <td>Залежить від стану рослини</td>
+                            </tr>
+
+                            <tr>
+                                <td>Зима</td>
+                                <td>Помірний</td>
+                                <td>Світле місце</td>
+                                <td>Для рослин у спокої зазвичай зменшують</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="flowering-grid" style="margin-top:30px;">
+
+                    <article class="flowering-card reveal">
+                        <h3>💧 Як зрозуміти, що потрібен полив?</h3>
+                        <p>
+                            Перевірте верхній шар ґрунту пальцем.
+                            Якщо він підсох, а горщик став легшим,
+                            рослині може знадобитися вода.
+                        </p>
+                    </article>
+
+                    <article class="flowering-card reveal">
+                        <h3>⚠️ Чому не можна заливати?</h3>
+                        <p>
+                            Постійно мокрий ґрунт зменшує доступ повітря
+                            до коренів і може створити умови для
+                            кореневих проблем.
+                        </p>
+                    </article>
+
+                    <article class="flowering-card reveal">
+                        <h3>🌱 Підживлення</h3>
+                        <p>
+                            Добрива використовують переважно в період
+                            активного росту, дотримуючись рекомендацій
+                            виробника конкретного препарату.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ЦВІТІННЯ
+        ====================================================== -->
+
+        <section id="flowering">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>КРАСА</span>
+                    <h2>Цвітіння гібіскуса</h2>
+                    <p>
+                        Саме великі та яскраві квіти є головною
+                        декоративною особливістю багатьох гібіскусів.
+                    </p>
+                </div>
+
+                <div class="flowering-grid">
+
+                    <article class="flowering-card reveal">
+                        <h3>🌺 Коли цвіте?</h3>
+                        <p>
+                            Час цвітіння залежить від виду, сорту,
+                            освітлення, температури та загального
+                            стану рослини. Кімнатні гібіскуси за
+                            сприятливих умов можуть цвісти протягом
+                            тривалого періоду.
+                        </p>
+                    </article>
+
+                    <article class="flowering-card reveal">
+                        <h3>☀️ Чому немає квітів?</h3>
+                        <p>
+                            Причинами можуть бути недостатнє освітлення,
+                            неправильний полив, надлишок азоту,
+                            стрес після пересадки або невідповідні
+                            температурні умови.
+                        </p>
+                    </article>
+
+                    <article class="flowering-card reveal">
+                        <h3>🌸 Чому квітка швидко в'яне?</h3>
+                        <p>
+                            У багатьох видів окрема квітка живе недовго.
+                            Це природна особливість рослини, а нові
+                            бутони можуть продовжувати розкриватися.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ОБРІЗКА
+        ====================================================== -->
+
+        <section class="pruning" id="pruning">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>ФОРМУВАННЯ</span>
+                    <h2>Обрізка гібіскуса</h2>
+                </div>
+
+                <div class="pruning-content reveal">
+
+                    <p>
+                        Обрізка допомагає підтримувати компактну форму
+                        рослини, стимулювати появу нових пагонів
+                        і видаляти слабкі або пошкоджені частини.
+                    </p>
+
+                    <p>
+                        Проводити обрізку потрібно чистим гострим
+                        інструментом. Сильну обрізку краще виконувати
+                        тоді, коли рослина здатна швидко відновлюватися.
+                    </p>
+
+                    <div class="pruning-list">
+
+                        <div>✂️ Видаляйте сухі та пошкоджені пагони.</div>
+                        <div>🌿 Формуйте бажану форму куща.</div>
+                        <div>🌱 Не обрізайте рослину без потреби.</div>
+                        <div>🧼 Використовуйте чистий інструмент.</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ХВОРОБИ
+        ====================================================== -->
+
+        <section class="diseases" id="diseases">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>ЗАХИСТ</span>
+                    <h2>Хвороби та шкідники</h2>
+                    <p>
+                        Зміни листя або відсутність цвітіння не завжди
+                        означають хворобу. Спочатку варто перевірити
+                        умови утримання рослини.
+                    </p>
+                </div>
+
+                <div class="disease-grid">
+
+                    <article class="disease-card reveal">
+                        <h3>🍃 Пожовтіння листя</h3>
+                        <p>
+                            <strong>Причини:</strong> неправильний полив,
+                            нестача світла, стрес або проблеми з корінням.
+                            <br>
+                            <strong>Що робити:</strong> перевірити ґрунт,
+                            освітлення та стан кореневої системи.
+                        </p>
+                    </article>
+
+                    <article class="disease-card reveal">
+                        <h3>🍂 Опадання листя</h3>
+                        <p>
+                            <strong>Причини:</strong> різка зміна умов,
+                            протяги, переохолодження або порушення
+                            режиму поливу.
+                            <br>
+                            <strong>Що робити:</strong> стабілізувати
+                            умови утримання.
+                        </p>
+                    </article>
+
+                    <article class="disease-card reveal">
+                        <h3>🌺 Відсутність цвітіння</h3>
+                        <p>
+                            <strong>Причини:</strong> недостатнє світло,
+                            неправильне підживлення або невідповідні умови.
+                            <br>
+                            <strong>Що робити:</strong> оцінити освітлення,
+                            полив, температуру та режим підживлення.
+                        </p>
+                    </article>
+
+                    <article class="disease-card reveal">
+                        <h3>🕷️ Павутинний кліщ</h3>
+                        <p>
+                            <strong>Ознаки:</strong> дрібні світлі плями
+                            та тонка павутина.
+                            <br>
+                            <strong>Що робити:</strong> ізолювати рослину
+                            та застосовувати відповідний засіб згідно
+                            з інструкцією.
+                        </p>
+                    </article>
+
+                    <article class="disease-card reveal">
+                        <h3>🐜 Попелиця</h3>
+                        <p>
+                            <strong>Ознаки:</strong> дрібні комахи
+                            на молодих пагонах та деформація листя.
+                            <br>
+                            <strong>Що робити:</strong> оглянути рослину
+                            та використати відповідний засіб захисту.
+                        </p>
+                    </article>
+
+                    <article class="disease-card reveal">
+                        <h3>🪽 Білокрилка</h3>
+                        <p>
+                            <strong>Ознаки:</strong> дрібні світлі комахи,
+                            які можуть злітати з листя при дотику.
+                            <br>
+                            <strong>Що робити:</strong> ізолювати рослину
+                            та провести необхідну обробку.
+                        </p>
+                    </article>
+
+                    <article class="disease-card reveal">
+                        <h3>🛡️ Щитівка</h3>
+                        <p>
+                            <strong>Ознаки:</strong> невеликі коричневі
+                            або світлі утворення на стеблах і листках.
+                            <br>
+                            <strong>Що робити:</strong> регулярно
+                            оглядати рослину та боротися зі шкідником.
+                        </p>
+                    </article>
+
+                    <article class="disease-card reveal">
+                        <h3>💧 Проблеми з корінням</h3>
+                        <p>
+                            <strong>Причина:</strong> тривале
+                            перезволоження та поганий дренаж.
+                            <br>
+                            <strong>Що робити:</strong> перевірити
+                            корені, стан ґрунту та дренаж.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ЗИМА
+        ====================================================== -->
+
+        <section class="winter" id="winter">
+
+            <div class="container">
+
+                <div class="winter-grid">
+
+                    <div class="winter-image reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1000&q=80"
+                            alt="Зелена рослина в домашніх умовах">
+                    </div>
+
+                    <div class="winter-text reveal">
+
+                        <span class="hero-label">
+                            ХОЛОДНИЙ ПЕРІОД
+                        </span>
+
+                        <h3>Гібіскус узимку</h3>
+
+                        <p>
+                            Узимку догляд за гібіскусом залежить від
+                            конкретного виду. Тропічні кімнатні рослини
+                            зазвичай потребують достатньої кількості
+                            світла та захисту від холоду.
+                        </p>
+
+                        <p>
+                            Полив узимку часто зменшують, особливо якщо
+                            температура нижча та ґрунт висихає повільніше.
+                            Важливо не перетворювати горщик на постійно
+                            мокре середовище.
+                        </p>
+
+                        <p>
+                            Якщо рослина перебуває у періоді спокою,
+                            підживлення також зазвичай скорочують.
+                            Навесні, зі збільшенням світлового дня,
+                            активний догляд поступово відновлюють.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             КУЛЬТУРА
+        ====================================================== -->
+
+        <section class="culture" id="culture">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>ТРАДИЦІЇ</span>
+                    <h2>Гібіскус у культурі</h2>
+                    <p>
+                        Квітка має різні символічні та практичні значення
+                        у різних частинах світу.
+                    </p>
+                </div>
+
+                <div class="culture-grid">
+
+                    <article class="culture-card reveal">
+                        <h3>🌺 Символ краси</h3>
+                        <p>
+                            Завдяки великим і яскравим квітам гібіскус
+                            часто пов'язують із красою, ніжністю,
+                            гостинністю та тропічною природою.
+                        </p>
+                    </article>
+
+                    <article class="culture-card reveal">
+                        <h3>🌏 Різні країни</h3>
+                        <p>
+                            У різних культурах гібіскус може мати
+                            різне символічне значення. Його часто
+                            використовують у декоративних композиціях
+                            та святковому оформленні.
+                        </p>
+                    </article>
+
+                    <article class="culture-card reveal">
+                        <h3>🍵 Напої</h3>
+                        <p>
+                            Hibiscus sabdariffa використовують для
+                            приготування кислуватого напою насиченого
+                            червоного кольору, відомого в різних країнах.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ЦІКАВІ ФАКТИ
+        ====================================================== -->
+
+        <section class="facts-section" id="facts">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>ЦІКАВО ЗНАТИ</span>
+                    <h2>10 фактів про гібіскус</h2>
+                    <p>
+                        Кілька цікавих особливостей цієї рослини.
+                    </p>
+                </div>
+
+                <div class="facts-grid">
+
+                    <div class="fact-item reveal">
+                        <strong>01</strong>
+                        <span>
+                            Назва роду — Hibiscus.
+                        </span>
+                    </div>
+
+                    <div class="fact-item reveal">
+                        <strong>02</strong>
+                        <span>
+                            Гібіскус належить до родини Мальвові.
+                        </span>
+                    </div>
+
+                    <div class="fact-item reveal">
+                        <strong>03</strong>
+                        <span>
+                            Існують трав'янисті, кущові та деревоподібні форми.
+                        </span>
+                    </div>
+
+                    <div class="fact-item reveal">
+                        <strong>04</strong>
+                        <span>
+                            Квіти можуть бути різних кольорів.
+                        </span>
+                    </div>
+
+                    <div class="fact-item reveal">
+                        <strong>05</strong>
+                        <span>
+                            Деякі види вирощують як кімнатні рослини.
+                        </span>
+                    </div>
+
+                    <div class="fact-item reveal">
+                        <strong>06</strong>
+                        <span>
+                            Інші види добре ростуть у садах.
+                        </span>
+                    </div>
+
+                    <div class="fact-item reveal">
+                        <strong>07</strong>
+                        <span>
+                            Hibiscus sabdariffa використовують для напоїв.
+                        </span>
+                    </div>
+
+                    <div class="fact-item reveal">
+                        <strong>08</strong>
+                        <span>
+                            Деякі квіти живуть лише нетривалий час.
+                        </span>
+                    </div>
+
+                    <div class="fact-item reveal">
+                        <strong>09</strong>
+                        <span>
+                            Рослина любить достатню кількість світла.
+                        </span>
+                    </div>
+
+                    <div class="fact-item reveal">
+                        <strong>10</strong>
+                        <span>
+                            Правильний догляд допомагає підтримувати
+                            рясне цвітіння.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section class="faq" id="faq">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+                    <span>ЗАПИТАННЯ</span>
+                    <h2>Часті запитання</h2>
+                    <p>
+                        Відповіді на популярні питання про вирощування
+                        та догляд за гібіскусом.
+                    </p>
+                </div>
+
+                <div class="faq-container">
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Чому у гібіскуса жовтіють листки?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Причиною може бути неправильний полив,
+                                недостатнє освітлення, різка зміна умов,
+                                стрес або проблеми з корінням. Варто
+                                перевірити ґрунт, освітлення та загальний
+                                стан рослини.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Чому гібіскус не цвіте?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Найчастіше потрібно перевірити освітлення,
+                                полив, температуру та підживлення.
+                                Надлишок азотних добрив також може
+                                сприяти активному росту листя замість
+                                формування квітів.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Як часто потрібно поливати гібіскус?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Немає єдиного графіка для всіх рослин.
+                                Полив залежить від температури, освітлення,
+                                розміру горщика та ґрунту. Орієнтуйтеся
+                                на стан верхнього шару субстрату.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Чи можна вирощувати гібіскус удома?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Так. Hibiscus rosa-sinensis є популярною
+                                кімнатною рослиною. Йому потрібні достатнє
+                                освітлення, тепло, правильний полив
+                                та регулярний догляд.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Як укорінити живець?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Здоровий живець можна укорінювати у воді
+                                або легкому субстраті. Важливо підтримувати
+                                тепло, достатню вологість субстрату
+                                та уникати його постійного перезволоження.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Коли пересаджувати гібіскус?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Молоді рослини зазвичай потребують
+                                пересадки частіше. Дорослу рослину
+                                пересаджують тоді, коли горщик став
+                                занадто малим або субстрат втратив
+                                свої властивості.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Чи потрібна гібіскусу обрізка?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Обрізка може допомогти сформувати красивий
+                                кущ, видалити слабкі пагони та підтримати
+                                появу нового приросту. Проводити її слід
+                                з урахуванням виду та сезону.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="faq-item reveal">
+
+                        <button class="faq-question">
+                            Чи небезпечний надмірний полив?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Так. Постійно мокрий субстрат може
+                                призвести до погіршення стану коренів.
+                                Саме тому горщик повинен мати дренажні
+                                отвори, а полив — відповідати умовам.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ВИСНОВОК
+        ====================================================== -->
+
+        <section class="conclusion">
+
+            <div class="container">
+
+                <div class="conclusion-content reveal">
+
+                    <h2>
+                        Гібіскус — більше, ніж просто квітка
+                    </h2>
+
+                    <p>
+                        Це дивовижна рослина з великою різноманітністю
+                        видів, форм і кольорів. Гібіскус може прикрасити
+                        оселю або сад, а процес його вирощування дає
+                        можливість краще пізнати світ рослин.
+                        Правильне освітлення, помірний полив, поживний
+                        ґрунт і уважний догляд допоможуть рослині
+                        залишатися здоровою та радувати своїми квітами.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <h3>HIBISCUS</h3>
+
+            <p>
+                © 2026 Hibiscus — світ прекрасних квітів
+            </p>
+
+            <p>
+                Вивчайте, вирощуйте та насолоджуйтеся красою гібіскуса.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- КНОПКА НАВЕРХ -->
+
+    <button id="topButton"
+            aria-label="Повернутися нагору">
+        ↑
+    </button>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /* =====================================================
+           МОБІЛЬНЕ МЕНЮ
+        ====================================================== */
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+
+            const isOpen = navMenu.classList.contains("active");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+
+        });
+
+
+        /* =====================================================
+           ЗАКРИТТЯ МЕНЮ ПІСЛЯ КЛІКУ
+        ====================================================== */
+
+        document.querySelectorAll(".nav-menu a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navMenu.classList.remove("active");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.textContent = "☰";
+
+            });
+
+        });
+
+
+        /* =====================================================
+           FAQ
+        ====================================================== */
+
+        document.querySelectorAll(".faq-question").forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                const currentItem = question.parentElement;
+                const currentAnswer = currentItem.querySelector(".faq-answer");
+
+                document.querySelectorAll(".faq-item").forEach(function(item) {
+
+                    if (item !== currentItem) {
+
+                        item.classList.remove("active");
+
+                        const answer = item.querySelector(".faq-answer");
+
+                        answer.style.maxHeight = null;
+
+                    }
+
+                });
+
+                currentItem.classList.toggle("active");
+
+                if (currentItem.classList.contains("active")) {
+
+                    currentAnswer.style.maxHeight =
+                        currentAnswer.scrollHeight + "px";
+
+                } else {
+
+                    currentAnswer.style.maxHeight = null;
+
+                }
+
+            });
+
+        });
+
+
+        /* =====================================================
+           КНОПКА "НАВЕРХ"
+        ====================================================== */
+
+        const topButton = document.getElementById("topButton");
+
+        window.addEventListener("scroll", function() {
+
+            if (window.scrollY > 500) {
+
+                topButton.classList.add("visible");
+
+            } else {
+
+                topButton.classList.remove("visible");
+
+            }
+
+        });
+
+        topButton.addEventListener("click", function() {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        /* =====================================================
+           АНІМАЦІЯ ПОЯВИ ЕЛЕМЕНТІВ
+        ====================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const revealObserver = new IntersectionObserver(
+            function(entries) {
+
+                entries.forEach(function(entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        revealObserver.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+        revealElements.forEach(function(element) {
+
+            revealObserver.observe(element);
+
+        });
+
+
+        /* =====================================================
+           ПЕРЕВІРКА ЗОБРАЖЕНЬ
+        ====================================================== */
+
+        document.querySelectorAll("img").forEach(function(image) {
+
+            image.addEventListener("error", function() {
+
+                this.style.display = "none";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
